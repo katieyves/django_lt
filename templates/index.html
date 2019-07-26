@@ -1,0 +1,96 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="{% static 'site.webmanifest' %}">
+  <link rel="apple-touch-icon" href="{% static 'icon.png' %}">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <form method="post" class="myform" action="{% url 'parse' %}">
+      {% csrf_token %}
+      <input type="number" min="1" max="31" name="day" placeholder="day">
+      <input type="number" min="1" max="12" name="month" placeholder="month">
+      <input type="number" min="2019" max="2020" name="year" value="2019" placeholder="year">
+      <input type="text" maxlength="2" name="country" placeholder="country">
+      <input type="text" name="stars" placeholder="stars">
+      <input type="number" name="nights" placeholder="nights">
+      <button type="submit" name="start">Reload</button>
+  </form>
+
+  <form method="get" action="{% url 'country_filter' %}">
+      <p>Filters:</p>
+      <label>Country: <input type="text" name="country"></label>
+      <button type="submit">Filter</button>
+  </form>
+  <form methot="post" action="{% url 'update_info' %}">
+      <button type="submit">Update</button>
+  </form>
+  <p></p>
+  <table>
+      <thead>
+      <tr>
+          <th>ID</th>
+          <th>name</th>
+          <th>stars</th>
+          <th>country</th>
+          <th>empty rooms</th>
+          <th>редактор</th>
+          <th>update info</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for hotel in hotels %}
+          <tr>
+            <td>{{ hotel.id_lt }}</td>
+            <td><a href='{{ hotel.href }}' target="_blank">{{ hotel.name }}</a></td>
+            <td>{{ hotel.stars }}</td>
+            <td>{{ hotel.country }}</td>
+            <td>{{ hotel.num_empty_rooms }}</td>
+            <td><a href='https://level.travel/admin/hotel_editor/{{ hotel.id_lt }}/accommodation/' target="_blank">link</a></td>
+            <td>
+                <form method="post" action="{% url 'update_hotel_info' %}">
+                {% csrf_token %}
+                    <input readonly value="{{ hotel.id_lt }}" name="id_lt">
+                    <button type="submit">Update</button>
+                </form>
+            </td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+
+
+  <script src="{% static 'js/vendor/modernizr-3.7.1.min.js' %}"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery-3.4.1.min.js' %}"><\/script>')</script>
+  <script src="{% static 'js/plugins.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
