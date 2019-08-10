@@ -9,8 +9,11 @@ from .models import Hotel
 import os
 
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
 def start(d, m, y, country, nights, stars):
-    chrome_driver = os.path.join(BASE_DIR, 'chromedriver')
+    chrome_driver = os.path.join(BASE_DIR, 'parsing/chromedriver')
     chrome_option = webdriver.ChromeOptions()
     prefs = {"profile.managed_default_content_settings.images": 2}
     chrome_option.add_experimental_option("prefs", prefs)
