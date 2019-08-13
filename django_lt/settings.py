@@ -25,7 +25,7 @@ SECRET_KEY = 'mk@y_23w!6#=^f*fd*!uf24#+4(j4-u+n%$s-us199meq+6)x)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '[::1]', 'localhost', 'katieyves.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '[::1]', 'localhost', 'katieyves.pythonanywhere.com', 'nameless-refuge-89353.herokuapp.com']
 
 
 # Application definition
