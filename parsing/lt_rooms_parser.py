@@ -6,10 +6,10 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException,
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 from .models import Hotel
-
+import os
 
 def start(d, m, y, country, nights, stars):
-    chrome_driver = '/Users/eivannikova/development/chromedriver'
+    chrome_driver = os.path.join(BASE_DIR, 'parsing/chromedriver')
     chrome_option = webdriver.ChromeOptions()
     prefs = {"profile.managed_default_content_settings.images": 2}
     chrome_option.add_experimental_option("prefs", prefs)
