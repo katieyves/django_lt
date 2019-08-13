@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f05a3bed-4855-43c3-b040-eefa1e9d0260" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/parsing/lt_rooms_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/lt_rooms_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,14 +16,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parsing/lt_rooms_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="178" column="58" selection-start-line="178" selection-start-column="58" selection-end-line="178" selection-end-column="58" />
+            <state relative-caret-position="218">
+              <caret line="131" column="27" selection-start-line="131" selection-start-column="27" selection-end-line="131" selection-end-column="27" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -31,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/django_lt/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-end-line="15" selection-end-column="70" />
+              <caret line="15" column="70" selection-start-line="15" selection-end-line="15" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -62,6 +72,7 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/django_lt/settings.py" />
         <option value="$PROJECT_DIR$/parsing/lt_rooms_parser.py" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -200,12 +211,12 @@
       <updated>1563873112088</updated>
       <workItem from="1563873120469" duration="26678000" />
       <workItem from="1564170726285" duration="2334000" />
-      <workItem from="1565723228721" duration="2799000" />
+      <workItem from="1565723228721" duration="3367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31811000" />
+    <option name="totallyTimeSpent" value="32379000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -234,7 +245,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32919955" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.1750306" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2876377" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32694477" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -341,17 +352,24 @@
     <entry file="file://$PROJECT_DIR$/django_lt/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-end-line="15" selection-end-column="70" />
+          <caret line="15" column="70" selection-start-line="15" selection-end-line="15" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parsing/lt_rooms_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="178" column="58" selection-start-line="178" selection-start-column="58" selection-end-line="178" selection-end-column="58" />
+        <state relative-caret-position="218">
+          <caret line="131" column="27" selection-start-line="131" selection-start-column="27" selection-end-line="131" selection-end-column="27" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>
