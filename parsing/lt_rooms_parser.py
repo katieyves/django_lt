@@ -8,10 +8,6 @@ import time
 from .models import Hotel
 import os
 
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
 def start(d, m, y, country, nights, stars):
     chrome_driver = os.path.join(BASE_DIR, 'parsing/chromedriver')
     chrome_option = webdriver.ChromeOptions()
