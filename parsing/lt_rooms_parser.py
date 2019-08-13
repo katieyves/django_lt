@@ -126,6 +126,7 @@ def update_info():
 #    chrome_option.add_argument("headless")
 
     driver = webdriver.Chrome(executable_path=chrome_driver, chrome_options=chrome_option)
+
     for hotel in query_set:
 
         url = hotel.href
@@ -179,6 +180,7 @@ def update_hotel_info_parse(id_lt):
     chrome_option.add_experimental_option("prefs", prefs)
     # chrome_option.add_argument("headless")
     driver = webdriver.Chrome(executable_path=chrome_driver, chrome_options=chrome_option)
+
     for hotel in hotels:
         url = hotel.href
 
