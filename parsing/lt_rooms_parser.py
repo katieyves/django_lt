@@ -8,8 +8,10 @@ import time
 from .models import Hotel
 import os
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 def start(d, m, y, country, nights, stars):
-    chrome_driver = '/Users/eivannikova/development/парсеры/django_lt/parsing/chromedriver')
+    chrome_driver = os.path.join(BASE_DIR, 'chromedriver')
     chrome_option = webdriver.ChromeOptions()
     prefs = {"profile.managed_default_content_settings.images": 2}
     chrome_option.add_experimental_option("prefs", prefs)
@@ -119,7 +121,7 @@ def start(d, m, y, country, nights, stars):
 
 def update_info():
     query_set = Hotel.objects.filter(country="Доминикана")
-    chrome_driver = '/Users/eivannikova/development/парсеры/django_lt/parsing/chromedriver'
+    chrome_driver = os.path.join(BASE_DIR, 'chromedriver')
     chrome_option = webdriver.ChromeOptions()
     prefs = {"profile.managed_default_content_settings.images": 2}
     chrome_option.add_experimental_option("prefs", prefs)
@@ -174,7 +176,7 @@ def update_info():
 
 def update_hotel_info_parse(id_lt):
     hotels = Hotel.objects.filter(id_lt=id_lt)
-    chrome_driver = '/Users/eivannikova/development/парсеры/django_lt/parsing/chromedriver'
+    chrome_driver = os.path.join(BASE_DIR, 'chromedriver')
     chrome_option = webdriver.ChromeOptions()
     prefs = {"profile.managed_default_content_settings.images": 2}
     chrome_option.add_experimental_option("prefs", prefs)
